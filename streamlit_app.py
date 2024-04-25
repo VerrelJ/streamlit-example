@@ -22,7 +22,7 @@ if st.button('Predict'):
     weekday_value = {'Monday': 0, 'Tuesday': 1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday': 5, 'Sunday':6 }[day]
     time = hour*4 + round(minute/15)
     features = [weekday_value, time, distance, pickup_area, dropoff_area]
-    # final_features = [np.array(features)]
-    prediction = model.predict(features)[0]
+    final_features = [np.array(features)]
+    prediction = model.predict(final_features)[0]
 
     st.success(f'Predicted Fare: ${prediction}')
