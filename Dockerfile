@@ -1,24 +1,28 @@
-# Use the official Python image
 FROM python:3.9-slim
-
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV PORT 8080
-
-# Set the working directory in the container
+ 
 WORKDIR /app
+ 
+RUN apt-get update && apt-get install -y \
 
-# Copy the dependencies file to the working directory
-COPY requirements.txt .
+    build-essential \
 
-# Install any dependencies
+    curl \
+
+    software-properties-common \
+
+    git \
+
+    && rm -rf /var/lib/apt/lists/*
+ 
+COPY . ./
+ 
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the content of the local src directory to the working directory
-COPY . .
-
-# Run the Flask application on container startup
 EXPOSE 8080
-CMD ["python", "app.py"]
+
+HEALTHCHECK CMD curl --fail http://localhost:8080/_stcore/health
+
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8080", "--server.address=0.0.0.0"]
+
+#--server.enableCORS=false
 
