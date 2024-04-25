@@ -4,7 +4,7 @@ import pickle
 import streamlit as st
 
 # Load the model
-# model = pickle.load(open('catboostModel (1).pkl', 'rb'))
+model = pickle.load(open('catboostModel (1).pkl', 'rb'))
 
 
 st.title("Taxi Fare Prediction 🚕")
