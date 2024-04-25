@@ -1,6 +1,5 @@
 numpy>=1.9.2
 scikit-learn>=0.18
 pandas>=0.19
-pickle
 streamlit
-xgboost==1.1.1
+catboost
