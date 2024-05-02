@@ -15,10 +15,10 @@ day = st.selectbox("Select day",
 hour = st.number_input("hour", min_value=0, max_value=23)  
 minute = st.number_input("minute", min_value=0, max_value=59)
 distance = st.number_input("Distance (meters)", format="%.2f")
-pickup_area = st.number_input("Pickup Commnunity Area")
-dropoff_area = st.number_input("Dropoff Commnunity Area")
-pickup_census = st.number_input("Pickup Census Tract")
-dropoff_census = st.number_input("Dropoff Census Tract")
+pickup_area = st.number_input("Pickup Commnunity Area", min_value=0)
+dropoff_area = st.number_input("Dropoff Commnunity Area", min_value=0)
+pickup_census = st.number_input("Pickup Census Tract", min_value=0)
+dropoff_census = st.number_input("Dropoff Census Tract", min_value=0)
 
 if st.button('Predict'):
     weekday_value = {'Monday': 0, 'Tuesday': 1, 'Wednesday':2, 'Thursday':3, 'Friday':4, 'Saturday': 5, 'Sunday':6 }[day]
