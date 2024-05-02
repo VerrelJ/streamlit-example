@@ -14,7 +14,7 @@ day = st.selectbox("Select day",
 
 hour = st.number_input("hour", min_value=0, max_value=23)  
 minute = st.number_input("minute", min_value=0, max_value=59)
-distance = st.number_input("Distance (meters)", min_value=0) 
+distance = st.number_input("Distance (meters)", min_value=0, format="%.2f") 
 pickup_area = st.number_input("Pickup Commnunity Area", min_value=1)
 dropoff_area = st.number_input("Dropoff Commnunity Area", min_value=1)
 pickup_census = st.number_input("Pickup Census Tract", min_value=1)
