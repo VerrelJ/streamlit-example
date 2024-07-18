@@ -2,6 +2,9 @@
 
 ## Overview:
 The goal of this project is to build machine learning to forecast fare by using parameters such as census tract, community area, latitude and longitude and time from the Chicago taxi dataset. The entire process will be explained, from gathering data to assessing the model.
+
+### Code ini diambil dan dimodifikasi
+### Source code:https://www.kaggle.com/code/fevsea/how-much-will-it-cost-me-pre-ride-regression#Initial-data-cleaning
   
 ## WebApp: 
 > Link: https://demo-1-fbhrrojzua-et.a.run.app
