@@ -1,5 +1,5 @@
-numpy>=1.21.6
+numpy>=1.26.4
 scikit-learn>=0.18
 pandas>=0.19
 streamlit
-catboost>=1.0.6
+catboost>=1.2.5
